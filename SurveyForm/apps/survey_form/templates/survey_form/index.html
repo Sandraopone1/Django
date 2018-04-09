@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action='/process' method='POST'>
+		{% csrf_token %}
+    <label for="name">Your Name:<input type="text" name="name" placeholder="ame"></label><br><br>
+    <label for="location">Dojo Location
+    					<select name="location">
+							<option value="Mountain View">Mountain View</option>
+							<option value="Washington d.c">Washington d.c</option>
+							<option value="Atlanta">Atlanta</option>
+							<option value="Forida">Forida</option>
+						</select><br><br>
+	<label for="language">Favorite Language
+    					<select name = "language">
+							<option value="Python">Python</option>
+							<option value="Javascript">Javascript</option>
+							<option value="Java">Java</option>
+							<option value="mean">Mean</option>
+						</select><br><br>
+    <label for="email">Comment(optional): <br>
+    	<textarea rows="4" cols="50" name="comment">
+
+		</textarea><br><br>
+    <input type="submit" value="Submit" name="submitb">
+  </form> 
+</body>
+</html>

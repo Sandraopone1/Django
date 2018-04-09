@@ -1,0 +1,30 @@
+.current{
+	border: 2px solid purple;
+	margin: 50px;
+	text-align: center;
+	height: 60px;
+	width: 300px;
+	position: relative;
+	left: 400px;
+
+}
+
+span{
+	position: relative;
+	top: 25px;
+}
+
+
+.line{
+	border: 5px solid blue;
+	margin: 50px;
+	text-align: center;
+	height: 100px;
+	width: 500px;
+	position: relative;
+	left: 300px;
+}
+p{
+	position: relative;
+	top: 25px;
+}

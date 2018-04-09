@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>result</title>
+</head>
+<body>
+	<h3>Submitted Information: </h3>
+	<p>Name: {{request.session.name}} </p>
+	<p>Dojo location: {{request.session.location}}</p>
+	<p>Favorite Language: {{request.session.language}}</p>
+	<p>Comment: {{request.session.comment}}</p>
+	<a href="/reset">Click here to reset</a>
+</body>
+</html>

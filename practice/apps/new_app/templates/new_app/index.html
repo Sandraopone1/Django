@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<hr>
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name"><br>
+        <input type="text" name="username" placeholder="Username"><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="password" name="confirm" placeholder="confirm password"><br>
+        <input type="submit" value="Register"><br>
+    </form><br>
+<hr>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username"><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="submit" value="Login"><br>
+    </form><br>
+    <a href="/clear">Logout</a>
+    
+</body>
+
+
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name"><br>
+        <input type="text" name="username" placeholder="Username"><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="password" name="confirm" placeholder="confirm password"><br>
+        <input type="submit" value="Register"><br>
+    </form><br>
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username"><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="submit" value="Login"><br>
+    </form><br>
+    <a href="/clear">Logout</a>
+    
+</body>
+</html>

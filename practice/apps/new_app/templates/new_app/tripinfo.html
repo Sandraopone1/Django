@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Trip Info:</h2>
+    <table>
+        <tr>
+            <th>Planned By</th>
+            <th>Destination</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>{{trip.planned_by.name}}</td>
+            <td>{{trip.destination}}</td>
+            <td>{{trip.start_date}}</td>
+            <td>{{trip.end_date}}</td>
+            <td>{{trip.description}}</td>
+        </tr>
+    </table><br>
+
+    <h4>Others on this trip:</h4>
+
+    {% for x in travellers %}
+    <p>{{x.traveller.name}}</p>
+    {% endfor %}
+
+    <a href="/home">Home</a><br><br>
+    <a href="/logout">Logout</a>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Trip Info:</h2>
+    <table>
+        <tr>
+            <th>Planned By</th>
+            <th>Destination</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>{{trip.planned_by.name}}</td>
+            <td>{{trip.destination}}</td>
+            <td>{{trip.start_date}}</td>
+            <td>{{trip.end_date}}</td>
+            <td>{{trip.description}}</td>
+        </tr>
+    </table><br>
+
+    <h4>Others on this trip:</h4>
+
+    {% for x in travellers %}
+    <p>{{x.traveller.name}}</p>
+    {% endfor %}
+
+    <a href="/home">Home</a><br><br>
+    <a href="/logout">Logout</a>
+</body>
+</html>

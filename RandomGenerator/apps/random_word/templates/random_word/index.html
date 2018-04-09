@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date and Time</title>
+	{% load static %}
+	 <link rel="stylesheet" href="{% static 'random_word/css/index.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+	<div class="word"><p>Random Word (attempt # {{counter}}) <p></div>
+
+	<div class="theword"><p>{{generator}}<p></div>
+
+	<form action="/create" method="post">
+		{% csrf_token %}
+		<input type="submit" name="count" value="Generate">
+	</form>
+	<a href="/reset">Click here to reset</a>
+
+
+</body>
+</html>

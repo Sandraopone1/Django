@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Session Words</title>
+</head>
+<body>
+	<!-- <h2> Add a new word </h2> -->
+	<form action='/process' method='POST'>
+		{% csrf_token %}
+	<label for="name">Add a new word:
+		<br><input type="text" name="comment" placeholder="type the word here"></label></br><br>
+
+	<label for="name">Choose Color?:	
+			<br>
+			  <input type="radio" id="red" name="color" value="red" checked> red<br>
+			  <input type="radio" id="blue" name="color" value="blue"> blue<br>
+			  <input type="radio" id="green" name="color" value="green"> green <br> 
+		   	<input type="checkbox" name="bigFont">Show in big Fonts!<br>
+		   		<input type="submit" value="Add to session" name="submit">
+	</form>
+
+	<!-- <a href="/clear">clear</a> -->
+
+	{% for everySentence in request.session.listofWord%}
+	<p style="color: {{everySentence.color}}; font-weight: {{everySentence.font}}">{{everySentence.comment}} {{everySentence.time}}</p>
+	{% endfor %}
+	
+	<!-- you wrote: {{request.session.name}}</p> -->
+
+</body>
+</html>
